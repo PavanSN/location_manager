@@ -1,7 +1,7 @@
 name: location_manager
-description: "A new Flutter package project."
+description: "The location_manager package provides a convenient and easy-to-use Dart API for handling location-based services within Flutter applications. It offers methods to fetch detailed address components based on GPS coordinates, latitude and longitude, or an address string, as well as to manage location permissions effectively."
 version: 0.0.1
-homepage:
+homepage: https://github.com/PavanSN/location_manager.git
 
 environment:
   sdk: ^3.5.0

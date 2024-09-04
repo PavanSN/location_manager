@@ -1,39 +1,45 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Location Manager
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+The `location_manager` package provides a comprehensive and easy-to-use solution for managing location-based services in Flutter applications. It allows developers to retrieve detailed address components based on GPS coordinates, latitude and longitude, or address strings, while effectively handling location permissions across Android and iOS platforms.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- **GPS-based Address Retrieval**: Retrieve detailed address information from the device's current GPS location, including street, city, state, country, and postal code.
+- **Coordinate-based Address Retrieval**: Fetch address components from specified latitude and longitude coordinates.
+- **Address Decoding**: Convert an address string into geographic coordinates and detailed address information.
+- **Location Permissions Management**: Check and request location permissions, prompt users to enable location services, and handle different permission statuses effectively.
+- **Cross-Platform Support**: Optimized location accuracy settings for both Android and iOS platforms.
 
-## Getting started
+## Installation
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+1. Import the Package
 
 ```dart
-const like = 'sample';
+import 'package:location_manager/location_manager.dart';
 ```
 
-## Additional information
+2. Initialize the LocationManager
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+```dart
+LocationManager locationManager = LocationManager();
+```
+
+
+
+```dart
+AddressComponent? address = await locationManager.getAddressFromGPS();
+if (address != null) {
+  print("Address: ${address.address1}, ${address.city}, ${address.country}");
+}
+```
+
+```dart
+AddressComponent? address = await locationManager.getAddressFromGPS();
+if (address != null) {
+  print("Address: ${address.address1}, ${address.city}, ${address.country}");
+}
+```
+
+```yaml
+dependencies:
+  location_manager: 
